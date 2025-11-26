@@ -1,6 +1,7 @@
 package ba.biblioteka;
 
 public class ObicnaKnjiga extends Knjiga implements Status {
+    private String status= "Nema status";
     @Override
     public double izracunajVrijednost() {
         return brojStranica*0.5;
@@ -13,11 +14,11 @@ public class ObicnaKnjiga extends Knjiga implements Status {
 
     @Override
     public void azurirajStatus(String status) {
-
+    this.status=status;
     }
 
     @Override
     public String getStatus() {
-        return "";
+        return status;
     }
 }
