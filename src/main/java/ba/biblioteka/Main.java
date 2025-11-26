@@ -2,6 +2,7 @@ package ba.biblioteka;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 public class Main {
     static void main(String[] args) {
@@ -29,6 +30,18 @@ public class Main {
             System.out.println("Status: "+k.getStatus());
             System.out.println("Vrijednost knjige: "+k.izracunajVrijednost());
             System.out.println("----------------------------");
+        }
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Unesite ISBN za pretragu: ");
+        String trISBN = sc.nextLine();
+
+        if(biblioteka.containsKey(trISBN)){
+            Knjiga k = biblioteka.get(trISBN);
+            System.out.println("ISBN: "+k.getISBN());
+            String tip = (k instanceof RijetkaKnjiga)?"Rijetka":"Obicna";
+            System.out.println("Tip: "+tip);
+            System.out.println("Status: "+k.getStatus());
+            System.out.println("Vrijednost knjige: "+k.izracunajVrijednost());
         }
     }
 }
