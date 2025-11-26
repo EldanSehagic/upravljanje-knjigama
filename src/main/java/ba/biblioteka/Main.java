@@ -11,5 +11,12 @@ public class Main {
         ObicnaKnjiga o2 = new ObicnaKnjiga("E112",50);
         RijetkaKnjiga r1 = new RijetkaKnjiga("R111",90);
         RijetkaKnjiga  r2 = new RijetkaKnjiga("R112",120);
+
+        biblioteka.put(o1.getISBN(),o1);
+        biblioteka.put(o2.getISBN(),o2);
+        biblioteka.put(r1.getISBN(),r1);
+        biblioteka.put(r2.getISBN(),r2);
+
+        
     }
 }
