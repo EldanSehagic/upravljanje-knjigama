@@ -21,5 +21,14 @@ public class Main {
         o2.azurirajStatus("Dostupna");
         r1.azurirajStatus("Rezervisana");
         r2.azurirajStatus("Rezervisana");
+
+        for(Knjiga k : biblioteka.values()){
+            System.out.println("ISBN: "+k.getISBN());
+            String tip = (k instanceof RijetkaKnjiga)?"Rijetka":"Obicna";
+            System.out.println("Tip: "+tip);
+            System.out.println("Status: "+k.getStatus());
+            System.out.println("Vrijednost knjige: "+k.izracunajVrijednost());
+            System.out.println("----------------------------");
+        }
     }
 }

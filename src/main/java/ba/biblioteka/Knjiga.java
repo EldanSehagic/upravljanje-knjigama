@@ -3,6 +3,7 @@ package ba.biblioteka;
 public abstract class Knjiga {
     protected String ISBN;
     protected double brojStranica;
+    protected String status;
 
     public abstract double izracunajVrijednost();
 
@@ -17,5 +18,9 @@ public abstract class Knjiga {
 
     public double getBrojStranica() {
         return brojStranica;
+    }
+
+    public String getStatus() {
+        return status;
     }
 }
