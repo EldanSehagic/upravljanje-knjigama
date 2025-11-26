@@ -17,6 +17,9 @@ public class Main {
         biblioteka.put(r1.getISBN(),r1);
         biblioteka.put(r2.getISBN(),r2);
 
-        
+        o1.azurirajStatus("Posudzena");
+        o2.azurirajStatus("Dostupna");
+        r1.azurirajStatus("Rezervisana");
+        r2.azurirajStatus("Rezervisana");
     }
 }
