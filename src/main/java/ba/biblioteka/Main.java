@@ -42,6 +42,13 @@ public class Main {
             System.out.println("Tip: "+tip);
             System.out.println("Status: "+k.getStatus());
             System.out.println("Vrijednost knjige: "+k.izracunajVrijednost());
+        }else{
+            System.out.println("Knjiga sa ISBN: " + trISBN + " ne postoji.");
         }
+        double ukupno = 0;
+        for(Knjiga k : biblioteka.values()){
+            ukupno += k.izracunajVrijednost();
+        }
+        System.out.println("Vrijednost svih knjiga: "+ukupno);
     }
 }
